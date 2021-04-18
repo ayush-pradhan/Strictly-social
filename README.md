@@ -58,3 +58,48 @@ flush privileges;
 2. **show all comments (under a post)**
 
 3. **add a comment**
+
+## API DOCUMENTATION
+
+### `users`
+
+1.  ` POST /users`
+
+Creates a new user with random username and an user id
+
+2. `GET /users/{userid}`
+
+Get an user with a given user id
+
+3. `GET /users/{username}`
+
+Get an user with a given username
+
+### `posts`
+
+1. `GET /posts/`
+
+Get all posts by everyone
+
+2. `POST /posts`
+
+Create a new post.
+
+Required fields in request's body
+
+```
+userId =
+title =
+body =
+```
+
+### Frontend (Client Side Code)
+
+```shell
+src/public
+├───app                 # our own frontend js code
+├───components          # own html snippets
+├───css                 # css libraries
+├───fonts               # fonts that
+└───js                  # js libraries
+```
