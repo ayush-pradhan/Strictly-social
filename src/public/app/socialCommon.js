@@ -1,7 +1,7 @@
 $(() => {
     $('#navbar').load('./components/navbar.html', loginIfNeeded)
     $('#footer').load('./components/footer.html')
-    $('#content').load('./components/all-articles.html')
+    $('#content').load('./components/all-posts.html')
 })
 
 function loginIfNeeded() {
@@ -20,8 +20,4 @@ function loginIfNeeded() {
         $('#nav-username').text(currentUser.username)
 
     }
-}
-
-function loadArticles() {
-    $.get('/api/get')
 }
