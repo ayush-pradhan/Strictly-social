@@ -18,7 +18,7 @@ function loadArticles() {
                                         ${p.body.substr(0, 200)}<a href="#">...read more</a>
                                     </p>
                                 </div>
-                                <a href="#" class="card-link">Comment</a>
+                                <a href="#" class="card-link" id="comment-link">Comment</a>
                                 <a href="#" class="card-link">Like</a>
                             </div>
                         </div>
