@@ -10,3 +10,7 @@
   bottom: 0;
   background-color: var(--light);
 }
+
+.card-info {
+  height: 15rem;
+}
