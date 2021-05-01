@@ -18,6 +18,11 @@ async function findAllComments(query){
     return comments
 }
 
+async function getCommentByUserId(userId) {
+    const comment =  await Comments.findAll({ where: {userId}})        // SQL where clause to fetch comment
+    return comment
+}
+
 module.exports = {
     createNewComment,
     findAllComments
@@ -40,14 +45,15 @@ async function task() {
     //         3
     //     )
     // )
-    const comments = await findAllComments()
-    for(let c of comments) {
-    console.log(`${c.title}`)
-    }
-    // const posts = await showAllPosts()
-    // for (let p of posts) {
-    //     console.log(`${p.title}\nauthor: ${p.user.username}\n${p.body}\n==========\n`)
+    // const comments = await findAllComments()
+    // for(let c of comments) {
+    // console.log(`${c.title}\n ${c.body}`)
     // }
+    
+    const comment = await getCommentByUserId(1)
+    for (let c of comment){
+        console.log(`${c.title}`)
+    }
 }
 
 task()
